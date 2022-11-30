@@ -5,8 +5,17 @@ for i in range(1, b + 1):
     for j in range(i):
         num.append(str(i))
 
-sum = 0
+sum_value = 0
 for i in range(a - 1, b):
-    sum += int(num[i])
+    sum_value += int(num[i])
 
-print(sum)
+print(sum_value)
+
+
+# 정수형으로 변환
+num = []
+for i in range(1, b + 1):
+    for j in range(i):
+        num.append(i)
+
+print(sum(num[a-1:b]))
