@@ -55,9 +55,3 @@ else:
             result = -1
 
     print(result)
-
-arr = [[1, 2, 3], [8, 10, 5], [2, 4, 9]]
-print(max(arr))
-print(max(max(arr)))
-print(max(map(max, arr)))
-print(list(map(max, arr)))
