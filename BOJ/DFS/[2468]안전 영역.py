@@ -1,6 +1,8 @@
 import sys
 sys.setrecursionlimit(10 ** 6)
+
 input = sys.stdin.readline
+
 n = int(input())
 building = [list(map(int, input().split())) for _ in range(n)]
 check = [[0 for _ in range(n)] for _ in range(n)]
