@@ -23,7 +23,7 @@ for k in range(1, n+1):
 
 distance = graph[1][k] + graph[k][x]
 
-if distance >= INF:
-    print(distance)
-else:
+if distance > INF:
     print(-1)
+else:
+    print(distance)
