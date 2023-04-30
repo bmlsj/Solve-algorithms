@@ -2,7 +2,6 @@ import heapq
 import sys
 input = sys.stdin.readline
 
-heap = []
 max_heap = []
 
 n = int(input())
