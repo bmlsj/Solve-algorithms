@@ -11,11 +11,11 @@ for k in range(1, 11):
 
     # 후위 표기식으로 변경
     for i in s:
-        if i == '+':
+        if i != '+':   # 숫자일 경우
             stack.append(i)
-        elif len(stack) and i != '+':
-            postfix += i
+        elif not stack:  # 연산자일 경우
             postfix += stack.pop()
+            stack.append(i)
         else:
             postfix += i
 
