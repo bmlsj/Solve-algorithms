@@ -20,4 +20,4 @@ for i in range(1, t + 1):
             total += int(arr[j][n // 2 - q])
             total += int(arr[j][n // 2 + q])
 
-    print(total)
+    print(f"#{i} {total}")
