@@ -42,7 +42,6 @@ def checkSudoku(M):
                         if square[num]:
                             ans = 0
                             break
-
                         square[num] = 1
 
     # 반복문이 정상적으로 다 수행된다면, 올바른 스도쿠이므로 1을 리턴
