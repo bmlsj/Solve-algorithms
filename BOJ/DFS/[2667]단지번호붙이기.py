@@ -7,6 +7,7 @@ def dfs(x, y):
 
     if x < 0 or x >= n or y < 0 or y >= n:
         return False
+
     if arr[x][y] == 1:
         global cnt
         arr[x][y] = 0
