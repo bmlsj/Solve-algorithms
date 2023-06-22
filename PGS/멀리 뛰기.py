@@ -15,6 +15,6 @@ def solution(n):
         dp[i] = dp[i-1] + dp[i-2]
 
     print(dp)
-    return dp[n-1]
+    return dp[n-1] % 1234567
 
 print(solution(4))
