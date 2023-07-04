@@ -1,7 +1,39 @@
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10 ** 6)
+sys.setrecursionlimit(10**6)
 
+import sys
+input = sys.stdin.readline
+
+n, m = map(int, input().split())
+arr = [list(input()) for _ in range(n)]
+
+
+def dfs(x, y, cnt):
+    global ans
+
+    ans = max(ans, cnt)
+    alph.add(arr[x][y])
+
+    dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1]
+    for i in range(4):
+        nx = x + dx[i]
+        ny = y + dy[i]
+
+        if 0 <= nx < n and 0 <= ny < m and (arr[nx][ny] not in alph):
+            alph.add(arr[nx][ny])
+            dfs(nx, ny, cnt + 1)
+            alph.remove(arr[nx][ny])
+
+
+ans = 0
+alph = set()
+dfs(0, 0, 1)
+
+print(ans)
+
+
+"""
 def dfs(a, b):
     global road
     visited[a][b] = True
@@ -49,31 +81,4 @@ if down_len == right_len == 0:
     print(1)
 else:
     print(max(down_len, right_len))
-
-"""
-8 1
-A
-B
-C
-D
-E
-F
-G
-H
-8
-
-1 1
-A
-1
-
-2 2
-AB
-CA
-2
-
-3 4
-ABCD
-AAAE
-IHGF
-9
 """
